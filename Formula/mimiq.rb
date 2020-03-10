@@ -6,7 +6,6 @@ class Mimiq < Formula
   
     bottle :unneeded
 
-    option "with-ffmpeg", "This is test of overriding generated description"
     depends_on "ffmpeg" => :recommended
 
     def install
