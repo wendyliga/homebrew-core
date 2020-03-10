@@ -1,12 +1,13 @@
 class Mimiq < Formula
     desc "mimiq is simple executable to record your Xcode simulator and convert it to GIF"
     homepage "https://github.com/wendyliga/mimiq"
-    url "https://github.com/wendyliga/mimiq/releases/download/0.0.1/mimiq.tar.gz"
-    sha256 "d09ee0a6411c449543be9a071ebca5330820f2b84c2d3b775d776ba83fdbf035"
+    url "https://github.com/wendyliga/mimiq/releases/download/0.1.0-beta/mimiq.tar.gz"
+    sha256 "3e62f95a3e7d39817fe3c6628879b525b1a3e2af398424931d429bec7715d7cd"
   
     bottle :unneeded
 
-    depends_on "ffmpeg"
+    option "with-ffmpeg", "This is test of overriding generated description"
+    depends_on "ffmpeg" => :recommended
 
     def install
         bin.install "mimiq"
