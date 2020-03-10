@@ -6,7 +6,7 @@ class Mimiq < Formula
   
     bottle :unneeded
 
-    dependes_on "ffmpeg"
+    depends_on "ffmpeg"
 
     def install
         bin.install "mimiq"
