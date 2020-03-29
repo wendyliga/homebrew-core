@@ -1,15 +1,31 @@
 class Mimiq < Formula
-    desc "mimiq is simple executable to record your Xcode simulator and convert it to GIF"
+    desc "A Simple Xcode Simulator GIF Recoder"
     homepage "https://github.com/wendyliga/mimiq"
-    url "https://github.com/wendyliga/mimiq/releases/download/0.1.0-beta/mimiq.tar.gz"
-    sha256 "3e62f95a3e7d39817fe3c6628879b525b1a3e2af398424931d429bec7715d7cd"
-  
-    bottle :unneeded
+    url "https://github.com/wendyliga/mimiq.git", 
+        :tag      => "0.2.4"
+    head "https://github.com/wendyliga/mimiq.git"
 
-    depends_on "ffmpeg" => :recommended
-
-    def install
-        bin.install "mimiq"
+    bottle do
+        cellar :any_skip_relocation
     end
+  
+    depends_on "ffmpeg" => :recommended
+    depends_on :xcode => "11.0"
+  
+    def install
+      system "make", "install", "prefix=#{prefix}"
+    end
+
+    def caveats
+        <<~EOS
+          Start record your Simulator by executing:
+            mimiq
+            
+          To see how to use mimiq, you can execute:
+            mimiq --help
+
+          For more detail, please check https://github.com/wendyliga/mimiq
+        EOS
+      end
   end
   
