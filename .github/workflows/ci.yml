@@ -1,0 +1,16 @@
+name: Tap
+
+on:
+  push:
+    branches: 
+      - master
+  pull_request:
+    branches: 
+      - '*'
+
+jobs:
+  tap:
+    runs-on: macOS-latest
+
+    steps:
+    - run: brew tap ${{ github.repository }}
