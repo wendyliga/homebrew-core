@@ -2,7 +2,7 @@ class Mimiq < Formula
     desc "A Simple Xcode Simulator GIF Recoder"
     homepage "https://github.com/wendyliga/mimiq"
     url "https://github.com/wendyliga/mimiq.git", 
-        :tag      => "0.3.1"
+        :tag      => "0.3.2"
     head "https://github.com/wendyliga/mimiq.git"
 
     bottle do
