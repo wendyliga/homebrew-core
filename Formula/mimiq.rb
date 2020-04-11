@@ -1,19 +1,13 @@
 class Mimiq < Formula
     desc "A Simple Xcode Simulator GIF Recoder"
     homepage "https://github.com/wendyliga/mimiq"
-    url "https://github.com/wendyliga/mimiq.git", 
-        :tag      => "0.3.5"
-    head "https://github.com/wendyliga/mimiq.git"
-
-    bottle do
-        cellar :any_skip_relocation
-    end
+    url "https://github.com/wendyliga/mimiq/releases/download/0.3.6/mimiq.tar.gz"
+    sha256 "8eb4d507c8fc8455c394afc5360cfa070945349e2fe7b9dbd52639da6263eb24"
   
-    depends_on "ffmpeg" => :recommended
-    depends_on :xcode => "11.0"
+    depends_on "ffmpeg" => "4.2.2"
   
     def install
-      system "make", "install", "prefix=#{prefix}"
+      bin.install "mimiq"
     end
 
     def caveats
@@ -29,7 +23,7 @@ class Mimiq < Formula
       end
 
       test do
-        assert_equal "current version 0.3.0\n", shell_output("#{bin}/mimiq version")
+        assert_equal "current version 0.3.6\n", shell_output("#{bin}/mimiq version")
       end
   end
   
