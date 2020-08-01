@@ -21,9 +21,5 @@ class Mimiq < Formula
           For more detail, please check https://github.com/wendyliga/mimiq
         EOS
       end
-
-      test do
-        assert_equal "current version 0.3.6\n", shell_output("#{bin}/mimiq version")
-      end
   end
   
