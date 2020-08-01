@@ -1,8 +1,8 @@
 class Mimiq < Formula
     desc "A Simple Xcode Simulator GIF Recoder"
     homepage "https://github.com/wendyliga/mimiq"
-    url "https://github.com/wendyliga/mimiq/releases/download/0.3.8/mimiq.tar.gz"
-    sha256 "37ff008e187cc9293d410f31ad7a772490612c848f5a7d49936dc0fb67e357c8"
+    url "https://github.com/wendyliga/mimiq/releases/download/0.4.0/mimiq.tar.gz"
+    sha256 "c76d08d23e59bf3a8690d5bf47dd8941ceef03b216f3de986d4d0c9002228259"
   
     depends_on "ffmpeg" => "4.2.2"
   
